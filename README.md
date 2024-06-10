@@ -48,20 +48,27 @@ A nightly scheduled task checks hotel capacities and notifies administrators if 
 - The system is containerized using Docker and deployable to cloud platforms like AWS, Azure, or Google Cloud.
 
 -Access the services via the following URLs:
-API Gateway: http://localhost:3000
-Admin Service: http://localhost:3001
-Search Service: http://localhost:3002
-Booking Service: http://localhost:3003
-Notification Service: http://localhost:3004
-Authentication Service: http://localhost:3005
+-API Gateway: http://localhost:3000
+-Admin Service: http://localhost:3001
+-Search Service: http://localhost:3002
+-Booking Service: http://localhost:3003
+-Notification Service: http://localhost:3004
+-Authentication Service: http://localhost:3005
 
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/3e7e1917-4f13-4f1b-9afb-716eef2a6d54)
+
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/1438364b-26ea-430d-ab44-b5cc542ccd09)
+
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/734b421f-7823-4a5d-9301-8e2935d5fbdb)
+
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/5b5fbc73-c83e-4d1b-a239-1d5c6a86fd28)
+
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/c0bd27aa-4f98-4a06-9143-a9ef316cf9f5)
+
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/b07be091-d0bd-4d73-ab5c-01cbd001071d)
+
 ![Ekran görüntüsü 2024-06-10 221042](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/469d96e3-3d3d-4b15-8e72-b495fa9198bd)
+
 ![Ekran görüntüsü 2024-06-10 221058](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/d123bc51-7467-4b37-957b-8103f8a6c2eb) 
 .....
 # Data Models
