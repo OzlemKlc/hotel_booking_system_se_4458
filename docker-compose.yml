@@ -1,0 +1,211 @@
+
+
+# version: '3.8'
+# services:
+#   service-a:
+#     build:
+#       context: ./service-A
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3001:3001"
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   service-b:
+#     build:
+#       context: ./service-B
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3002:3002"
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   service-c:
+#     build:
+#       context: ./service-C
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3003:3003"
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   service-d:
+#     build:
+#       context: ./service-D
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3004:3004"
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   service-e:
+#     build:
+#       context: ./service-E
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3005:3005"
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   api-gateway:
+#     build:
+#       context: ./api-gateway
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:3000"
+#     depends_on:
+#       - service-a
+#       - service-b
+#       - service-c
+#       - service-d
+#       - service-e
+#     environment:
+#       - REDIS_HOST=redis
+#       - RABBITMQ_HOST=rabbitmq
+#       - RABBITMQ_USER=user
+#       - RABBITMQ_PASS=password
+
+#   rabbitmq:
+#     image: 'rabbitmq:3-management'
+#     ports:
+#       - '5672:5672'
+#       - '15672:15672'
+#     environment:
+#       RABBITMQ_DEFAULT_USER: user
+#       RABBITMQ_DEFAULT_PASS: password
+
+#   redis:
+#     image: 'redis:alpine'
+#     ports:
+#       - '6379:6379'
+
+version: '3.8'
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: hotelbooking
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+  redis:
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'
+  service-a:
+    build:
+      context: ./service-A
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=hotelbooking
+  service-b:
+    build:
+      context: ./service-B
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=hotelbooking
+  service-c:
+    build:
+      context: ./service-C
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=hotelbooking
+  service-d:
+    build:
+      context: ./service-D
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3004"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=hotelbooking
+  service-e:
+    build:
+      context: ./service-E
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=hotelbooking
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - service-a
+      - service-b
+      - service-c
+      - service-d
+      - service-e
+    environment:
+      - REDIS_HOST=redis
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_USER=user
+      - RABBITMQ_PASS=password

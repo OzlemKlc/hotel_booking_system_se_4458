@@ -1,0 +1,15 @@
+{
+  "name": "service-b",
+  "version": "1.0.0",
+  "description": "Service B",
+  "main": "service-b.js",
+  "scripts": {
+    "start": "node service-b.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^3.0.2",
+    "amqplib": "^0.7.1" ,
+    "http-proxy": "1.18.1"
+  }
+}
