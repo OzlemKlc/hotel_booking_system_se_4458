@@ -47,13 +47,13 @@ A nightly scheduled task checks hotel capacities and notifies administrators if 
 - Redis is used for caching.
 - The system is containerized using Docker and deployable to cloud platforms like AWS, Azure, or Google Cloud.
 
--Access the services via the following URLs:
--API Gateway: http://localhost:3000
--Admin Service: http://localhost:3001
--Search Service: http://localhost:3002
--Booking Service: http://localhost:3003
--Notification Service: http://localhost:3004
--Authentication Service: http://localhost:3005
+# Access the services via the following URLs:
+ -API Gateway: http://localhost:3000
+ -Admin Service: http://localhost:3001
+ -Search Service: http://localhost:3002
+ -Booking Service: http://localhost:3003
+ -Notification Service: http://localhost:3004
+ -Authentication Service: http://localhost:3005
 
 ![image](https://github.com/OzlemKlc/hotel_booking_system_se_4458/assets/122043812/3e7e1917-4f13-4f1b-9afb-716eef2a6d54)
 
